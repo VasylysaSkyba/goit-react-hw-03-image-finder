@@ -1,16 +1,19 @@
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
-};
+import React, { Comment } from "react";
+import Searchbar from "./Searchbar/Searchbar";
+
+export default class App extends Comment {
+  state = {
+    query: '',
+  };
+    setQueryFormSearchbar = query => {
+      this.setState({ query})
+  }
+
+  render() {
+    return (
+      <>
+            <Searchbar setQueryFormSearchbar={this.setQueryFormSearchbar}  />
+      </>
+    );
+  }
+}
