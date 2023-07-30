@@ -4,6 +4,7 @@
     left: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     background: rgb(40, 160, 174);
     width: 100vw;
     height: 100vh;
